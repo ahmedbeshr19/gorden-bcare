@@ -1,0 +1,618 @@
+/* --- Base & Reset --- */
+.home-page {
+  direction: rtl;
+  font-family: var(--bvcremanusspace-tajawal-regular-font-family, "Tajawal", sans-serif);
+  color: var(--color-grey-20, #333);
+  background-color: var(--color-white-solid, #fff);
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* --- Header --- */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #eaeaea;
+  position: relative;
+  z-index: 1000;
+}
+
+.header-left .lang-toggle {
+  color: var(--color-azure-33, #146394);
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.header-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.header-center .header-logo {
+  height: 40px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.header-right .user-icon {
+  color: var(--color-azure-33, #146394);
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+  background-color: var(--color-azure-33, #146394);
+  padding: 40px 20px 100px;
+  text-align: center;
+  color: #fff;
+}
+
+.heading-1 {
+  font-family: var(--bvcremanusspace-semantic-heading-1-font-family, "Tajawal", sans-serif);
+  font-size: clamp(24px, 5vw, 36px);
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.hero-subtext {
+  font-size: clamp(14px, 3vw, 16px);
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* --- Insurance Search Section --- */
+.insurance-section {
+  position: relative;
+  margin-top: -60px; /* Overlap hero */
+  z-index: 10;
+  margin-bottom: 40px;
+}
+
+.search-form-container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+/* Tabs */
+.form-tabs {
+  display: flex;
+  background-color: #fff;
+  border-bottom: 2px solid #f3f4f6;
+  overflow-x: auto;
+}
+
+.form-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-btn {
+  flex: 1;
+  min-width: 70px;
+  padding: 15px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 14px;
+  color: #9ca3af;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.tab-btn img {
+  height: 24px;
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
+
+.tab-btn.active {
+  color: var(--color-azure-33, #146394);
+  border-bottom-color: var(--color-orange-58, #faa62e);
+  font-weight: 700;
+}
+
+.tab-btn.active img {
+  filter: none;
+  opacity: 1;
+}
+
+/* Form Content */
+.form-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #fcfcfc;
+}
+
+/* Toggle Buttons */
+.insurance-type-toggle, .registration-type-group {
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+.toggle-btn, .radio-button {
+  flex: 1;
+  padding: 15px;
+  text-align: center;
+  border: none;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.toggle-btn.inactive, .radio-button.inactive {
+  background-color: #f3f4f6;
+  color: #6c757d;
+}
+
+.toggle-btn.active, .radio-button.active {
+  background-color: var(--color-azure-33, #146394);
+  color: #fff;
+}
+
+/* Radio Button Layout */
+.radio-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.radio-circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #9ca3af;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radio-circle.active {
+  border-color: var(--color-orange-58, #faa62e);
+}
+
+.radio-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-orange-58, #faa62e);
+  border-radius: 50%;
+}
+
+/* Inputs */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+  color: #4a5565;
+  font-weight: 600;
+}
+
+.form-input {
+  padding: 14px 15px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 15px;
+  outline: none;
+  background: #fff;
+}
+
+.form-input::placeholder {
+  color: #d1d5db;
+}
+
+.error-border {
+  border-color: #ef4444 !important;
+}
+
+.error-text {
+  color: #ef4444;
+  font-size: 11px;
+  margin-top: 4px;
+  display: block;
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%236b7280%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: left 15px center;
+  background-size: 12px auto;
+  padding-left: 35px;
+}
+
+.form-row-split {
+  display: flex;
+  gap: 15px;
+}
+
+.form-row-split .form-group {
+  flex: 1;
+}
+
+.relative-input {
+  position: relative;
+}
+
+.info-icon {
+  position: absolute;
+  left: 15px;
+  top: 38px;
+  width: 20px;
+  height: 20px;
+  background: #e5e7eb;
+  color: #6b7280;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Captcha */
+.captcha-input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.captcha-input {
+  flex: 1;
+  border: none;
+  border-radius: 0;
+}
+
+.captcha-box {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  gap: 10px;
+}
+
+.captcha-image {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: bold;
+  letter-spacing: 5px;
+  color: #d97706; /* Matches screenshot styling roughly */
+  background: repeating-linear-gradient(45deg, #f3f4f6, #f3f4f6 5px, #fff 5px, #fff 10px);
+  padding: 5px 10px;
+}
+
+.refresh-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #374151;
+  display: flex;
+  align-items: center;
+}
+
+.refresh-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Agreement & Submit */
+.submit-group {
+  margin-top: 10px;
+  gap: 15px;
+}
+
+.agreement {
+  font-size: 12px;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.submit-btn {
+  background-color: var(--color-orange-58, #faa62e);
+  color: #fff;
+  border: none;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Partners Banner */
+.partners-banner {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.partners-logos-left {
+  display: flex;
+  overflow: hidden;
+  width: 180px; /* Restrict width to show sliding effect */
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  animation: marquee-scroll 18s linear infinite;
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(100%); } /* Positive translation because of RTL */
+}
+
+.partner-img {
+  height: 30px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.partners-logos-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: #6b7280;
+  border-right: 1px solid #e5e7eb;
+  padding-right: 15px;
+}
+
+.ia-img {
+  height: 35px;
+}
+
+/* --- Features Section --- */
+.section-title {
+  text-align: center;
+  font-size: 20px;
+  color: var(--color-azure-33, #146394);
+  margin: 40px 0 20px;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.feature-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 12px 5px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border: 1px solid #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.feature-icon img {
+  height: 25px;
+}
+
+.feature-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-azure-33, #146394);
+  line-height: 1.3;
+}
+
+/* --- Discounts Section --- */
+.discounts-section {
+  background-color: #f9fafb;
+  padding: 30px 15px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+}
+
+.discounts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.discount-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+.discount-text {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-azure-33, #146394);
+  line-height: 1.4;
+}
+
+.discount-logo {
+  width: 45px;
+  height: 45px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  background: #f3f4f6;
+  overflow: hidden;
+  padding: 5px; /* Added breathing room */
+}
+
+.discount-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Changed to contain to avoid cropping logos */
+}
+
+.view-more-link {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-azure-33, #146394);
+  text-decoration: underline;
+  margin-top: 10px;
+}
+
+/* --- Why Choose Us Section --- */
+.why-us-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 15px;
+  margin-bottom: 50px;
+}
+
+.why-us-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.why-icon img {
+  height: 40px;
+}
+
+.why-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-azure-33, #146394);
+}
+
+/* --- Floating Buttons --- */
+.floating-buttons {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 100;
+}
+
+.float-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.float-btn.headset {
+  background-color: var(--color-orange-58, #faa62e);
+  color: #fff;
+}
+
+.float-btn.headset svg {
+  width: 24px;
+  height: 24px;
+}
+
+.float-btn.scroll-up {
+  background-color: var(--color-azure-33, #146394);
+  color: #fff;
+}
+
+.float-btn.scroll-up svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* --- Desktop Overrides --- */
+@media (min-width: 768px) {
+  .features-grid, .why-us-grid, .discounts-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .form-content {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .form-group, .insurance-type-toggle, .registration-type-group {
+    flex: 1 1 45%;
+  }
+
+  .footer-accordion {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: none;
+    gap: 20px;
+  }
+  
+  .accordion-item {
+    border: none;
+  }
+
+  .accordion-header svg {
+    display: none;
+  }
+}

@@ -1,0 +1,494 @@
+/* Offers.css - Redesigned to match the provided screenshots */
+
+.offers-page {
+  direction: rtl;
+  font-family: "Tajawal", sans-serif;
+  background-color: #f1f5f9;
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+
+.offers-main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 15px;
+}
+
+/* --- Stepper Adjustments --- */
+.stepper-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  margin-bottom: 30px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100px;
+}
+
+.step-number {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #e2e8f0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  z-index: 2;
+}
+
+.step.completed .step-number {
+  background: #FFAA2C;
+}
+
+.step.active .step-number {
+  background: #146394;
+}
+
+.step-label {
+  font-size: 12px;
+  color: #94a3b8;
+  font-weight: 500;
+  text-align: center;
+}
+
+.step.active .step-label {
+  color: #146394;
+  font-weight: 700;
+}
+
+.step.completed .step-label {
+  color: #FFAA2C;
+}
+
+.step-line {
+  height: 3px;
+  flex: 1;
+  background: #e2e8f0;
+  margin-top: -22px;
+  z-index: 1;
+}
+
+.step-line.active {
+  background: #FFAA2C;
+}
+
+/* --- Vehicle Details Card --- */
+.vehicle-details-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  margin-bottom: 20px;
+}
+
+.vehicle-details-card .card-title {
+  color: #146394;
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.detail-item .label {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.detail-item .value {
+  font-size: 16px;
+  color: #146394;
+  font-weight: 800;
+}
+
+/* --- SAMA Note Box --- */
+.sama-note-box {
+  background: #e0f2fe;
+  border: 1px solid #bae6fd;
+  border-radius: 15px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.sama-note-box p {
+  color: #146394;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* --- Insurance Tabs --- */
+.insurance-tabs-container {
+  display: flex;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.insurance-tab {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  background: #fff;
+  color: #146394;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.insurance-tab.active {
+  background: #146394;
+  color: #fff;
+}
+
+/* --- New Offer Card --- */
+.new-offer-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.card-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 15px;
+}
+
+.company-branding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.price-under-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.logo-box {
+  width: 100px;
+  height: 60px;
+  padding: 10px;
+  border: 1px solid #f1f5f9;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.large-price {
+  font-size: 22px;
+  font-weight: 900;
+  color: #146394;
+  line-height: 1.2;
+}
+
+.price-unit {
+  font-size: 10px;
+  color: #94a3b8;
+  font-weight: 700;
+}
+
+.company-text-info {
+  flex: 1;
+  text-align: right;
+}
+
+.company-name-title {
+  font-size: 18px;
+  color: #146394;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+.insurance-type-label {
+  font-size: 13px;
+  color: #FFAA2C;
+  font-weight: 700;
+}
+
+.card-middle-row {
+  display: flex;
+  padding: 0 20px 20px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+
+.features-selection-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-right: 20px;
+}
+
+.feature-option-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+  width: fit-content;
+  min-width: 250px;
+}
+
+.feature-option-row:last-child {
+  border-bottom: none;
+}
+
+.checkbox-styled {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #cbd5e1;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  flex-shrink: 0;
+  background: #fff;
+}
+
+.checkbox-styled.checked {
+  background: #fff;
+  border-color: #146394;
+}
+
+.checkbox-styled.checked i {
+  color: #146394;
+  font-size: 14px;
+  display: block !important;
+  visibility: visible !important;
+}
+
+.feature-name {
+  font-size: 13px;
+  color: #1e293b;
+  flex: 1;
+}
+
+.feature-name.main-feat {
+  font-weight: 700;
+}
+
+.feature-name.addon-feat {
+  font-weight: 400;
+}
+
+.feature-price {
+  font-size: 13px;
+  color: #146394;
+  font-weight: 700;
+}
+
+/* --- Card Bottom Row (Fees) --- */
+.card-bottom-row {
+  padding: 20px;
+}
+
+.fees-section {
+  margin-bottom: 20px;
+}
+
+.section-header {
+  display: block;
+  font-size: 14px;
+  color: #146394;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.fee-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.fee-label {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.fee-value {
+  font-size: 13px;
+  color: #146394;
+  font-weight: 700;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 15px;
+  width: 100%;
+}
+
+.feature-option-row.readonly {
+  cursor: default;
+  pointer-events: none;
+}
+
+.new-select-btn {
+  width: 100%;
+  padding: 18px;
+  background: #146394;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(20, 99, 148, 0.2);
+  transition: all 0.2s;
+}
+
+.new-select-btn:hover {
+  background: #0d4a70;
+  transform: translateY(-2px);
+}
+
+/* --- Floating Support --- */
+.floating-support {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000;
+}
+
+.support-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.support-circle.orange { background: #FFAA2C; }
+.support-circle.blue { background: #146394; }
+
+.support-circle:hover {
+  transform: scale(1.1);
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 600px) {
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+  .card-middle-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .price-display-col {
+    width: 100%;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-start;
+  }
+  .features-selection-col {
+    padding-right: 0;
+  }
+  .step-label {
+    display: none;
+  }
+}
+
+/* Skeleton Loader */
+.skeleton-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.skeleton-box {
+  background: #e2e8f0;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton-box::after {
+  content: "";
+  position: absolute;
+  top: 0; left: -100%; width: 50%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  100% { left: 100%; }
+}
+
+/* Urgency Banner */
+.urgency-banner {
+  background: linear-gradient(90deg, #fff3cd, #ffe8a1);
+  color: #856404;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.fire-icon {
+  font-size: 16px;
+}
+
+.countdown-timer {
+  background: #dc3545;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 14px;
+}

@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    direction: rtl;
+}
+
+/* Specific Class for Main Navigation/Call-to-Action Buttons */
+.main-action-btn {
+    background-color: #FFAA2C !important;
+    color: #fff !important;
+    border: none !important;
+    padding: 12px 25px !important;
+    border-radius: 10px !important;
+    font-family: inherit !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+}
+
+.main-action-btn:hover {
+    background-color: #f98e05 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 170, 44, 0.4);
+}
+
+/* Glowing Preview Button - Using requested color #FFAA2C */
+.btn-glow {
+    animation: glow-pulse-new 2s infinite !important;
+    box-shadow: 0 0 0 0 rgba(255, 170, 44, 0.7) !important;
+    background: linear-gradient(135deg, #FFAA2C 0%, #ffc163 100%) !important;
+    border: 2px solid #fff !important;
+}
+
+@keyframes glow-pulse-new {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 170, 44, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(255, 170, 44, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 170, 44, 0);
+    }
+}
+
+/* --- Global Header Styles --- */
+.site-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 12px 20px !important;
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #eaeaea !important;
+    position: relative !important;
+    z-index: 1000 !important;
+    width: 100% !important;
+    min-height: 60px !important;
+}
+
+.header-right, .header-left {
+    display: flex !important;
+    align-items: center !important;
+    min-width: 40px !important;
+}
+
+.header-center {
+    flex: 1 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.header-logo {
+    height: 40px !important;
+    width: auto !important;
+    display: block !important;
+    object-fit: contain !important;
+    max-width: 150px !important;
+}
+
+.lang-toggle {
+    color: #146394 !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    cursor: pointer !important;
+}
+
+.user-icon {
+    color: #146394 !important;
+    width: 24px !important;
+    height: 24px !important;
+    cursor: pointer !important;
+}
+
+.user-icon img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+}
+
+@media (max-width: 768px) {
+    .site-header {
+        padding: 8px 15px !important;
+        min-height: 50px !important;
+    }
+    .header-logo {
+        height: 32px !important;
+    }
+}
